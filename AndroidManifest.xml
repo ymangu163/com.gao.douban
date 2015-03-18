@@ -24,7 +24,8 @@
             </intent-filter>
         </activity>
         
-        <activity  android:name=".activity.MainActivity"></activity>
+        <activity  android:name=".activity.MyDoubanActivity"></activity>
+        <activity  android:name=".activity.BaseActivity"></activity>
         
         
     </application>

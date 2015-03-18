@@ -48,7 +48,7 @@ public class SplashActivity extends Activity{
 				public void run() {
 					try {
 						Thread.sleep(2000);
-						Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+						Intent intent = new Intent(SplashActivity.this,MyDoubanActivity.class);
 						startActivity(intent);
 						finish();
 					} catch (InterruptedException e) {
