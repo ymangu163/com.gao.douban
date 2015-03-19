@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar.LayoutParams;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -155,6 +156,19 @@ public abstract class BaseActivity extends ActionBarActivity  implements OnClick
 	}
 
 
+	@Override
+	protected void onStart() {
+		super.onStart();
+		// 设置Actionbar样式
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+        	actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(false);
+		
+        }
+	}
+	
+	
 	@Override
 	public void onClick(View v) {
 		

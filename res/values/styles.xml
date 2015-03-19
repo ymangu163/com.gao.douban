@@ -1,20 +1,36 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+<style name="BlueOceanTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="actionBarStyle">@style/CustomActionBar</item>
+    <item name="homeAsUpIndicator">@drawable/title_return_selector</item>
+    <item name="android:windowAnimationStyle">@style/BlueOceanTheme.Window</item>
+</style>
+    
+	<!--Actionbar 样式-->
+    <style name="CustomActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@color/color_157cbe</item>
+        <item name="titleTextStyle">@style/CustomActionBar.TitleTextColor</item>
     </style>
 
-    <!-- Application theme. -->
+      <style name="CustomActionBar.TitleTextColor" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+      <!-- Activity动画  -->
+    <style name="BlueOceanTheme.Window" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_from_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_from_right</item>
+    </style>
+      
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+
+    </style>
+
+
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+ 
     </style>
 
     <style name="TextView14">
